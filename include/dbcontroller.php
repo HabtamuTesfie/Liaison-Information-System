@@ -1,8 +1,8 @@
 <?php
-$DB_host = "localhost";
-$DB_user = "root";
-$DB_pass = "";
-$DB_name = "ingram";
+$DB_host = "remotemysql.com";
+$DB_user = "6Yj8WDRD9s";
+$DB_pass = "NmNEiNUO8F";
+$DB_name = "6Yj8WDRD9s";
 try
 {
  $DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
