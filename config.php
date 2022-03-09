@@ -1,9 +1,9 @@
 <?php
 include_once('include/Database.php');
-define('SS_DB_NAME', 'bed');
-define('SS_DB_USER', 'root');
-define('SS_DB_PASSWORD', '');
-define('SS_DB_HOST', 'localhost');
+define('SS_DB_NAME', '6Yj8WDRD9s');
+define('SS_DB_USER', '6Yj8WDRD9s');
+define('SS_DB_PASSWORD', 'NmNEiNUO8F');
+define('SS_DB_HOST', 'remotemysql.com');
 
 $dsn	= 	"mysql:dbname=".SS_DB_NAME.";host=".SS_DB_HOST."";
 $pdo	=	"";
