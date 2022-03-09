@@ -55,54 +55,18 @@
 									$id=$_SESSION['user_id'];
 									if($_POST['role']=="Admin")
 									{
-									mysqli_query($server,"delete from loginlogs where IpAddress='$ip_address'");	
-									mysqli_query($server,"INSERT INTO loginlogs (user_id)VALUES ('$id')");
 									Redirect('AdminHome.php');
 									} 
 									if($_POST['role']=="Liaison officer")
-									{
-									mysqli_query($server,"delete from loginlogs where IpAddress='$ip_address'");
-									mysqli_query($server,"INSERT INTO loginlogs (user_id)VALUES ('$id')");
-                                    $user_id=$_SESSION['user_id'];
-	                                $username=$_SESSION['uname'];
-	                                $password=$_SESSION['pword'];
-	                                $role=$_SESSION['role'];
-	                               date_default_timezone_set("Africa/Addis_Ababa");
-                                   $ldate=date( 'Y-m-d h:i:s A', time () );
-	                                 $name=$_SESSION['name'];
-									 $creationdate = date( 'Y-m-d');
-	                              mysqli_query($server,"INSERT INTO userlog (user_id,username,name,password,role,loginTime,creationdate) 
-	                              VALUES ('$user_id','$username','$name','$password','$role','$ldate','$creationdate')");									
+									{									
 									Redirect('dashboard.php');
 									} 
 									if($_POST['role']=="Physician")
 									{
-									mysqli_query($server,"delete from loginlogs where IpAddress='$ip_address'");
-                                    mysqli_query($server,"INSERT INTO loginlogs (user_id)VALUES ('$id')");									
-									$user_id=$_SESSION['user_id'];
-	                                $username=$_SESSION['uname'];
-	                                $password=$_SESSION['pword'];
-	                                $role=$_SESSION['role'];
-	                               //$loginDate=date("Y/m/d"); 
-	                               //$loginTime=date("h:i:sa");
-	                                $name=$_SESSION['name'];
-	                                mysqli_query($server,"INSERT INTO userlog (user_id,username,name,password,role) 
-	                                VALUES ('$user_id','$username','$name','$password','$role')");
-									Redirect('physicianhomepage.php');
+								Redirect('physicianhomepage.php');
 									} 
 									if($_POST['role']=="HMIS focal person")
 									{
-									mysqli_query($server,"delete from loginlogs where IpAddress='$ip_address'");
-									mysqli_query($server,"INSERT INTO loginlogs (user_id)VALUES ('$id')");
-									$user_id=$_SESSION['user_id'];
-	                                $username=$_SESSION['uname'];
-	                                $password=$_SESSION['pword'];
-	                                $role=$_SESSION['role'];
-	                               //$loginDate=date("Y/m/d"); 
-	                               //$loginTime=date("h:i:sa");
-	                               $name=$_SESSION['name'];
-	                               mysqli_query($server,"INSERT INTO userlog (user_id,username,name,password,role) 
-	                        VALUES ('$user_id','$username','$name','$password','$role')");	
 									Redirect('Report.php');
 									} 
 									
