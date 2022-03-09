@@ -4,10 +4,10 @@
 
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_database='bed';
+$servername = "remotemysql.com";
+$username = "6Yj8WDRD9s";
+$password = "NmNEiNUO8F";
+$db_database='6Yj8WDRD9s';
 
 // Create connection
 $server = mysqli_connect($servername, $username, $password);
